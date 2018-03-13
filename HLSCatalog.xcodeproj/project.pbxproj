@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0427A76553096E377071D605 /* Pods_HLSCatalog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AFDEB8D102709B0AF311418 /* Pods_HLSCatalog.framework */; };
 		1C45382020573F8B00245C78 /* FairplayManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C45381F20573F8B00245C78 /* FairplayManager.swift */; };
+		1CA5FD1E20577D4200455D64 /* Streams.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1CA5FD1D20577D4200455D64 /* Streams.plist */; };
 		421AAB661CE4FCCB007444CA /* AssetListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421AAB651CE4FCCB007444CA /* AssetListTableViewController.swift */; };
 		424BF6CD1CEFB5ED0098BB15 /* AssetPlaybackManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424BF6CC1CEFB5ED0098BB15 /* AssetPlaybackManager.swift */; };
 		425DD0A51D0D146900F96325 /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425DD0A41D0D146900F96325 /* Asset.swift */; };
@@ -19,11 +20,11 @@
 		428139FC1CE44B7300972264 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 428139FA1CE44B7300972264 /* LaunchScreen.storyboard */; };
 		42813A061CE44F9700972264 /* AssetPersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42813A051CE44F9700972264 /* AssetPersistenceManager.swift */; };
 		42AA6D151D04CE63002A8B3F /* AssetListManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42AA6D141D04CE63002A8B3F /* AssetListManager.swift */; };
-		42AFF1461CE52D3E006B1BB3 /* Streams.plist in Resources */ = {isa = PBXBuildFile; fileRef = 42AFF1451CE52D3E006B1BB3 /* Streams.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1C45381F20573F8B00245C78 /* FairplayManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FairplayManager.swift; sourceTree = "<group>"; };
+		1CA5FD1D20577D4200455D64 /* Streams.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Streams.plist; sourceTree = SOURCE_ROOT; };
 		421AAB651CE4FCCB007444CA /* AssetListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = AssetListTableViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		424BF6CC1CEFB5ED0098BB15 /* AssetPlaybackManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = AssetPlaybackManager.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		42554D4B1D09EEDC0040BD4F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -37,7 +38,6 @@
 		428139FD1CE44B7300972264 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		42813A051CE44F9700972264 /* AssetPersistenceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = AssetPersistenceManager.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		42AA6D141D04CE63002A8B3F /* AssetListManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = AssetListManager.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		42AFF1451CE52D3E006B1BB3 /* Streams.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Streams.plist; sourceTree = "<group>"; };
 		6AFDEB8D102709B0AF311418 /* Pods_HLSCatalog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HLSCatalog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BAC66FB4CA1590C125E0DE6 /* Pods-HLSCatalog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HLSCatalog.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HLSCatalog/Pods-HLSCatalog.debug.xcconfig"; sourceTree = "<group>"; };
 		DC310ED77656A9502A66F1F7 /* Pods-HLSCatalog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HLSCatalog.release.xcconfig"; path = "Pods/Target Support Files/Pods-HLSCatalog/Pods-HLSCatalog.release.xcconfig"; sourceTree = "<group>"; };
@@ -99,11 +99,11 @@
 				428139F11CE44B7300972264 /* AppDelegate.swift */,
 				421AAB651CE4FCCB007444CA /* AssetListTableViewController.swift */,
 				426CB19F1D054A3F0044B8A7 /* AssetListTableViewCell.swift */,
-				42AFF1451CE52D3E006B1BB3 /* Streams.plist */,
 				428139F81CE44B7300972264 /* Assets.xcassets */,
 				428139F51CE44B7300972264 /* Main.storyboard */,
 				428139FA1CE44B7300972264 /* LaunchScreen.storyboard */,
 				428139FD1CE44B7300972264 /* Info.plist */,
+				1CA5FD1D20577D4200455D64 /* Streams.plist */,
 			);
 			path = HLSCatalog;
 			sourceTree = "<group>";
@@ -194,8 +194,8 @@
 			files = (
 				428139FC1CE44B7300972264 /* LaunchScreen.storyboard in Resources */,
 				428139F91CE44B7300972264 /* Assets.xcassets in Resources */,
+				1CA5FD1E20577D4200455D64 /* Streams.plist in Resources */,
 				428139F71CE44B7300972264 /* Main.storyboard in Resources */,
-				42AFF1461CE52D3E006B1BB3 /* Streams.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

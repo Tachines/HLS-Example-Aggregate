@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>AssetNameKey</key>
+		<string>Fairplay stream 1 - Rake S1E1</string>
+		<key>AAPLStreamPlaylistURL</key>
+		<string>https://v1-manifest-api.stan.com.au/hls/ios.m3u8?quality=sd&amp;connectionInfo=wifi&amp;type=iPhone7,2&amp;version=10.2.1&amp;url=http%3A%2F%2F371-streamco-a.akamaihd.net%2F21%2Fhls%2F371019B-2%2Fhd%2Fmaster.m3u8</string>
+		<key>ContentID</key>
+		<string>drmtoday?variantId=hd&amp;assetId=2641d84661d75aeaa375f8438485fe8e</string>
+		<key>ProgramID</key>
+		<string>371019</string>
+	</dict>
+	<dict>
+		<key>AssetNameKey</key>
+		<string>Fairplay stream 3 - Imposters S1E1</string>
+		<key>AAPLStreamPlaylistURL</key>
+		<string>https://v1-manifest-api.stan.com.au/hls/ios.m3u8?quality=sd&amp;connectionInfo=wifi&amp;type=iPhone7,2&amp;version=10.2.1&amp;url=http%3A%2F%2F467-streamco-a.akamaihd.net%2F17%2Fhls%2F1269425B-1%2Fhd%2Fmaster.m3u8</string>
+		<key>ContentID</key>
+		<string>drmtoday?variantId=hd&amp;assetId=e870af96183a52e4a66190fe89a00fb0</string>
+		<key>ProgramID</key>
+		<string>1269425</string>
+	</dict>
+	<dict>
+		<key>AssetNameKey</key>
+		<string>Fairplay stream 4 - Samurai Jack S2E1</string>
+		<key>AAPLStreamPlaylistURL</key>
+		<string>https://v1-manifest-api.stan.com.au/hls/ios.m3u8?quality=sd&amp;connectionInfo=wifi&amp;type=iPhone7,2&amp;version=10.2.1&amp;url=http%3A%2F%2F370-streamco-a.akamaihd.net%2F20%2Fhls%2F394098A-2%2Fhd%2Fmaster.m3u8</string>
+		<key>ContentID</key>
+		<string>drmtoday?variantId=hd&amp;assetId=0d77bf6aaad15dd5988c96bd359b0e47</string>
+		<key>ProgramID</key>
+		<string>394098</string>
+	</dict>
+</array>
+</plist>

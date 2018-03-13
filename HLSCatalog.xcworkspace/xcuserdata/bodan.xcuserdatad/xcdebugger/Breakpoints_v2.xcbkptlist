@@ -9,76 +9,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "HLSCatalog/Managers/AssetPersistenceManager.swift"
-            timestampString = "542603090.742409"
+            filePath = "HLSCatalog/AssetListTableViewController.swift"
+            timestampString = "542608784.057327"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
-            landmarkName = "AssetPersistenceManager"
-            landmarkType = "3">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "globalinit_33_A7542B99B74CE963BC8F6918F32D96F7_func0"
-                  moduleName = "HLSCatalog"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/bodan/Documents/HLS-Example-Aggregate/HLSCatalog/Managers/AssetPersistenceManager.swift"
-                  timestampString = "542602989.230141"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "28"
-                  endingLineNumber = "28"
-                  offsetFromSymbolStart = "12">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "HLSCatalog.AssetPersistenceManager.sharedManager.unsafeMutableAddressor : HLSCatalog.AssetPersistenceManager"
-                  moduleName = "HLSCatalog"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/bodan/Documents/HLS-Example-Aggregate/HLSCatalog/Managers/AssetPersistenceManager.swift"
-                  timestampString = "542602989.231899"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "28"
-                  endingLineNumber = "28"
-                  offsetFromSymbolStart = "20">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "static HLSCatalog.AssetPersistenceManager.sharedManager.getter : HLSCatalog.AssetPersistenceManager"
-                  moduleName = "HLSCatalog"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/bodan/Documents/HLS-Example-Aggregate/HLSCatalog/Managers/AssetPersistenceManager.swift"
-                  timestampString = "542602989.233548"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "28"
-                  endingLineNumber = "28"
-                  offsetFromSymbolStart = "36">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "HLSCatalog/Managers/AssetPersistenceManager.swift"
-            timestampString = "542603090.742787"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
-            landmarkName = "init()"
+            startingLineNumber = "129"
+            endingLineNumber = "129"
+            landmarkName = "prepare(for:sender:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -89,12 +26,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HLSCatalog/Managers/AssetPersistenceManager.swift"
-            timestampString = "542603090.74303"
+            timestampString = "542610019.603631"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "72"
-            endingLineNumber = "72"
-            landmarkName = "restorePersistenceManager()"
+            startingLineNumber = "331"
+            endingLineNumber = "331"
+            landmarkName = "urlSession(_:aggregateAssetDownloadTask:didCompleteFor:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -104,13 +41,45 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "HLSCatalog/Managers/AssetPersistenceManager.swift"
-            timestampString = "542603104.3622251"
+            filePath = "HLSCatalog/AssetListTableViewCell.swift"
+            timestampString = "542608047.974133"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
-            landmarkName = "restorePersistenceManager()"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "asset"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HLSCatalog/AssetListTableViewCell.swift"
+            timestampString = "542608049.6619231"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "asset"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HLSCatalog/Managers/AssetPersistenceManager.swift"
+            timestampString = "542610019.6040061"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "328"
+            endingLineNumber = "328"
+            landmarkName = "urlSession(_:aggregateAssetDownloadTask:didCompleteFor:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

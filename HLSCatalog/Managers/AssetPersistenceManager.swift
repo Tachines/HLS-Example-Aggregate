@@ -349,7 +349,7 @@ extension AssetPersistenceManager: AVAssetDownloadDelegate {
         var userInfo = [String: Any]()
         userInfo[Asset.Keys.name] = asset.name
         userInfo[Asset.Keys.percentDownloaded] = percentComplete
-
+        print("Progress: \(percentComplete)")
         NotificationCenter.default.post(name: .AssetDownloadProgress, object: nil, userInfo:  userInfo)
     }
 }
