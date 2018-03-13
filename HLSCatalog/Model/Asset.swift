@@ -7,24 +7,23 @@
  */
 import AVFoundation
 
-class Asset {
+struct Asset {
+    
+    /// The name of the Asset.
+    let name: String
+    
+    /// for license stuffs
+    let contentId: String
+    let programId: String
     
     /// The AVURLAsset corresponding to this Asset.
-    var urlAsset: AVURLAsset
-    
-    /// The underlying `Stream` associated with the Asset based on the contents of the `Streams.plist` entry.
-    let stream: Stream
-    
-    init(stream: Stream, urlAsset: AVURLAsset) {
-        self.urlAsset = urlAsset
-        self.stream = stream
-    }
+    let urlAsset: AVURLAsset
 }
 
 /// Extends `Asset` to conform to the `Equatable` protocol.
 extension Asset: Equatable {
     static func ==(lhs: Asset, rhs: Asset) -> Bool {
-        return (lhs.stream == rhs.stream) && (lhs.urlAsset == rhs.urlAsset)
+        return (lhs.name == rhs.name) && (lhs.urlAsset == rhs.urlAsset)
     }
 }
 

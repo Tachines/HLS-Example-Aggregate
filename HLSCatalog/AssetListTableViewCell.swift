@@ -42,7 +42,7 @@ class AssetListTableViewCell: UITableViewCell {
                     break
                 }
 
-                assetNameLabel.text = asset.stream.name
+                assetNameLabel.text = asset.name
                 downloadStateLabel.text = downloadState.rawValue
                 
                 let notificationCenter = NotificationCenter.default
@@ -65,7 +65,7 @@ class AssetListTableViewCell: UITableViewCell {
         guard let assetStreamName = notification.userInfo![Asset.Keys.name] as? String,
             let downloadStateRawValue = notification.userInfo![Asset.Keys.downloadState] as? String,
             let downloadState = Asset.DownloadState(rawValue: downloadStateRawValue),
-            let asset = asset, asset.stream.name == assetStreamName else { return }
+            let asset = asset, asset.name == assetStreamName else { return }
 
         DispatchQueue.main.async {
             switch downloadState {
@@ -88,7 +88,7 @@ class AssetListTableViewCell: UITableViewCell {
 
     @objc func handleAssetDownloadProgress(_ notification: NSNotification) {
         guard let assetStreamName = notification.userInfo![Asset.Keys.name] as? String,
-            let asset = asset, asset.stream.name == assetStreamName else { return }
+            let asset = asset, asset.name == assetStreamName else { return }
         guard let progress = notification.userInfo![Asset.Keys.percentDownloaded] as? Double else { return }
 
         self.downloadProgressView.setProgress(Float(progress), animated: true)

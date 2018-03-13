@@ -65,6 +65,7 @@ class AssetListTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print("!!!___!!! \(AssetListManager.sharedManager.numberOfAssets())")
         return AssetListManager.sharedManager.numberOfAssets()
     }
 
@@ -105,7 +106,7 @@ class AssetListTableViewController: UITableViewController {
             }
         }
 
-        let alertController = UIAlertController(title: asset.stream.name, message: "Select from the following options:",
+        let alertController = UIAlertController(title: asset.name, message: "Select from the following options:",
                                                 preferredStyle: .actionSheet)
         alertController.addAction(alertAction)
         alertController.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil))

@@ -16,6 +16,8 @@ class AssetPlaybackManager: NSObject {
     /// Singleton for AssetPlaybackManager.
     static let sharedManager = AssetPlaybackManager()
     
+    fileprivate var currentFairplayManager: FairplayManager?
+    
     weak var delegate: AssetPlaybackDelegate?
     
     /// The instance of AVPlayer that will be used for playback of AssetPlaybackManager.playerItem.
@@ -110,6 +112,10 @@ class AssetPlaybackManager: NSObject {
      and handle KVO cleanup.
      */
     func setAssetForPlayback(_ asset: Asset?) {
+        if let asset = asset {
+            self.currentFairplayManager = FairplayManager.manager(assetId: asset.programId, contentId: asset.contentId)
+            asset.urlAsset.resourceLoader.setDelegate(self.currentFairplayManager, queue: DispatchQueue.main)
+        }
         self.asset = asset
     }
 }
