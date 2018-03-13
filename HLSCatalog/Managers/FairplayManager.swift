@@ -142,17 +142,6 @@ class FairplayManager: NSObject {
     func loadLicense(certificate: Data, contentId: String, loadingRequest: AVAssetResourceLoadingRequest) {
         do {
             guard let backend = self.backend else { return }
-            let currentTime = Int64(Date().timeIntervalSince1970)
-            if let ckc = backend.loadCachedLicense(contentId: contentId, currentTime:currentTime) {
-                if let contentInformationRequest = loadingRequest.contentInformationRequest {
-                    contentInformationRequest.contentType = AVStreamingKeyDeliveryPersistentContentKeyType
-                }
-                if let dataRequest = loadingRequest.dataRequest {
-                    dataRequest.respond(with: ckc)
-                }
-                loadingRequest.finishLoading()
-                return
-            }
             let request = try backend.licenseRequest(certificate: certificate, loadingRequest: loadingRequest, contentId: contentId)
             let task = URLSession.shared.dataTask(with: request as URLRequest) {data, response, error in
                 guard error == nil else {

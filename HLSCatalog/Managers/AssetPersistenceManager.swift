@@ -31,6 +31,8 @@ class AssetPersistenceManager: NSObject {
     fileprivate var willDownloadToUrlMap = [AVAggregateAssetDownloadTask: URL]()
     
     fileprivate let baseDownloadURL: URL
+    
+    fileprivate var currentFairplayManager: FairplayManager?
 
     // MARK: Intialization
     
@@ -97,6 +99,8 @@ class AssetPersistenceManager: NSObject {
         // To better track the AVAssetDownloadTask we set the taskDescription to something unique for our sample.
         task.taskDescription = asset.name
 
+        self.currentFairplayManager = FairplayManager.manager(assetId: asset.programId, contentId: asset.contentId)
+        asset.urlAsset.resourceLoader.setDelegate(currentFairplayManager, queue: DispatchQueue.main)
         activeDownloadsMap[task] = asset
 
         task.resume()
@@ -137,28 +141,17 @@ class AssetPersistenceManager: NSObject {
 
     /// Returns the current download state for a given Asset.
     func downloadState(for asset: Asset) -> Asset.DownloadState {
-        let userDefaults = UserDefaults.standard
-        
-        
-        // Check if there are any active downloads in flight.
-        for (_, assetValue) in activeDownloadsMap {
-            if asset.name == assetValue.name {
-                return .downloading
+        // Check if there is a file URL stored for this asset.
+        if let localFileLocation = localAssetForStream(withName: asset.name, contentId: asset.contentId, programId: asset.programId)?.urlAsset.url {
+            // Check if the file exists on disk
+            if FileManager.default.fileExists(atPath: localFileLocation.path) {
+                return .downloaded
             }
         }
         
-        // Check if there is a file URL stored for this asset.
-        if let localFileLocation = userDefaults.value(forKey: asset.name) as? String{
-            // Check if the file exists on disk
-            let localFilePath = baseDownloadURL.appendingPathComponent(localFileLocation).path
-            
-            if localFilePath == baseDownloadURL.path {
-                return .notDownloaded
-            }
-            
-            if FileManager.default.fileExists(atPath: localFilePath) {
-                return .downloaded
-            }
+        // Check if there are any active downloads in flight.
+        for (_, assetValue) in activeDownloadsMap where asset.name == assetValue.name {
+            return .downloading
         }
         
         return .notDownloaded
@@ -237,7 +230,7 @@ func displayNamesForSelectedMediaOptions(_ mediaSelection: AVMediaSelection) -> 
 extension AssetPersistenceManager: AVAssetDownloadDelegate {
 
     /// Tells the delegate that the task finished transferring data.
-    func urlSession(_ session: URLSession, task: URLSessionTask, didCompleteWithError error: Error?) {
+//    func urlSession(_ session: URLSession, task: URLSessionTask, didCompleteWithError error: Error?) {
 //        let userDefaults = UserDefaults.standard
 //
 //        /*
@@ -260,7 +253,7 @@ extension AssetPersistenceManager: AVAssetDownloadDelegate {
 //                 This task was canceled, you should perform cleanup using the
 //                 URL saved from AVAssetDownloadDelegate.urlSession(_:assetDownloadTask:didFinishDownloadingTo:).
 //                 */
-//                guard let localFileLocation = localAssetForStream(withName: asset.name)?.urlAsset.url else { return }
+//                guard let localFileLocation = localAssetForStream(withName: asset.name, contentId: asset.contentId, programId: asset.programId)?.urlAsset.url else { return }
 //
 //                do {
 //                    try FileManager.default.removeItem(at: localFileLocation)
@@ -292,7 +285,7 @@ extension AssetPersistenceManager: AVAssetDownloadDelegate {
 //        }
 //
 //        NotificationCenter.default.post(name: .AssetDownloadStateChanged, object: nil, userInfo: userInfo)
-    }
+//    }
 
     /// Method called when the an aggregate download task determines the location this asset will be downloaded to.
     func urlSession(_ session: URLSession, aggregateAssetDownloadTask: AVAggregateAssetDownloadTask,

@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HLSCatalog/AssetListTableViewController.swift"
-            timestampString = "542608784.057327"
+            timestampString = "542614701.371665"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "129"
@@ -22,15 +22,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HLSCatalog/Managers/AssetPersistenceManager.swift"
-            timestampString = "542610019.603631"
+            timestampString = "542614701.371735"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "331"
-            endingLineNumber = "331"
+            startingLineNumber = "324"
+            endingLineNumber = "324"
             landmarkName = "urlSession(_:aggregateAssetDownloadTask:didCompleteFor:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -74,12 +74,140 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HLSCatalog/Managers/AssetPersistenceManager.swift"
-            timestampString = "542610019.6040061"
+            timestampString = "542614701.372164"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "328"
-            endingLineNumber = "328"
+            startingLineNumber = "321"
+            endingLineNumber = "321"
             landmarkName = "urlSession(_:aggregateAssetDownloadTask:didCompleteFor:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HLSCatalog/Managers/FairplayManager.swift"
+            timestampString = "542614012.963357"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "187"
+            endingLineNumber = "187"
+            landmarkName = "resourceLoader(_:shouldWaitForLoadingOfRequestedResource:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HLSCatalog.FairplayManager.resourceLoader(__ObjC.AVAssetResourceLoader, shouldWaitForLoadingOfRequestedResource: __ObjC.AVAssetResourceLoadingRequest) -&gt; Swift.Bool"
+                  moduleName = "HLSCatalog"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bodan/Documents/HLS-Example-Aggregate/HLSCatalog/Managers/FairplayManager.swift"
+                  timestampString = "542614012.9958251"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "187"
+                  endingLineNumber = "187"
+                  offsetFromSymbolStart = "1832">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__ObjC.URLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in HLSCatalog.FairplayManager.resourceLoader(__ObjC.AVAssetResourceLoader, shouldWaitForLoadingOfRequestedResource: __ObjC.AVAssetResourceLoadingRequest) -&gt; Swift.Bool"
+                  moduleName = "HLSCatalog"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bodan/Documents/HLS-Example-Aggregate/HLSCatalog/Managers/FairplayManager.swift"
+                  timestampString = "542614012.997686"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "188"
+                  endingLineNumber = "188"
+                  offsetFromSymbolStart = "44">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HLSCatalog/Managers/FairplayManager.swift"
+            timestampString = "542614012.963411"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "180"
+            endingLineNumber = "180"
+            landmarkName = "resourceLoader(_:shouldWaitForLoadingOfRequestedResource:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HLSCatalog/Managers/FairplayManager.swift"
+            timestampString = "542614012.963457"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "144"
+            endingLineNumber = "144"
+            landmarkName = "loadLicense(certificate:contentId:loadingRequest:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HLSCatalog.FairplayManager.loadLicense(certificate: Foundation.Data, contentId: Swift.String, loadingRequest: __ObjC.AVAssetResourceLoadingRequest) -&gt; ()"
+                  moduleName = "HLSCatalog"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bodan/Documents/HLS-Example-Aggregate/HLSCatalog/Managers/FairplayManager.swift"
+                  timestampString = "542611894.118096"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "144"
+                  endingLineNumber = "144"
+                  offsetFromSymbolStart = "64">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__ObjC.URLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in HLSCatalog.FairplayManager.loadLicense(certificate: Foundation.Data, contentId: Swift.String, loadingRequest: __ObjC.AVAssetResourceLoadingRequest) -&gt; ()"
+                  moduleName = "HLSCatalog"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bodan/Documents/HLS-Example-Aggregate/HLSCatalog/Managers/FairplayManager.swift"
+                  timestampString = "542611894.120229"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "144"
+                  endingLineNumber = "144"
+                  offsetFromSymbolStart = "56">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "HLSCatalog/Managers/FairplayManager.swift"
+            timestampString = "542614012.963502"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
+            landmarkName = "handleLicenseResponse(contentId:res:loadingRequest:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
