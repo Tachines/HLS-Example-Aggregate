@@ -141,17 +141,28 @@ class AssetPersistenceManager: NSObject {
 
     /// Returns the current download state for a given Asset.
     func downloadState(for asset: Asset) -> Asset.DownloadState {
-        // Check if there is a file URL stored for this asset.
-        if let localFileLocation = localAssetForStream(withName: asset.name, contentId: asset.contentId, programId: asset.programId)?.urlAsset.url {
-            // Check if the file exists on disk
-            if FileManager.default.fileExists(atPath: localFileLocation.path) {
-                return .downloaded
+        let userDefaults = UserDefaults.standard
+        
+        
+        // Check if there are any active downloads in flight.
+        for (_, assetValue) in activeDownloadsMap {
+            if asset.name == assetValue.name {
+                return .downloading
             }
         }
         
-        // Check if there are any active downloads in flight.
-        for (_, assetValue) in activeDownloadsMap where asset.name == assetValue.name {
-            return .downloading
+        // Check if there is a file URL stored for this asset.
+        if let localFileLocation = userDefaults.value(forKey: asset.name) as? String{
+            // Check if the file exists on disk
+            let localFilePath = baseDownloadURL.appendingPathComponent(localFileLocation).path
+            
+            if localFilePath == baseDownloadURL.path {
+                return .notDownloaded
+            }
+            
+            if FileManager.default.fileExists(atPath: localFilePath) {
+                return .downloaded
+            }
         }
         
         return .notDownloaded

@@ -35,6 +35,9 @@ class AssetPlaybackManager: NSObject {
     /// The `NSKeyValueObservation` for the KVO on \AVPlayer.currentItem.
     private var playerObserver: NSKeyValueObservation?
     
+    // In Swift 4, you don't need to remove observer manually, invalidate it or just leave it
+    // Notice that the way to add obverser is also changed (simplified)
+    
     /// The AVPlayerItem associated with AssetPlaybackManager.asset.urlAsset
     private var playerItem: AVPlayerItem? {
         willSet {

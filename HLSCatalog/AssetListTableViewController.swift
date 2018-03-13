@@ -65,7 +65,6 @@ class AssetListTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("!!!___!!! \(AssetListManager.sharedManager.numberOfAssets())")
         return AssetListManager.sharedManager.numberOfAssets()
     }
 
